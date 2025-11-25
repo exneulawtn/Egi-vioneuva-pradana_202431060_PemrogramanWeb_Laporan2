@@ -1,0 +1,141 @@
+/* Tema Warna Halaman Default: HIJAU (Mode Rapi) */
+:root {
+    --color-primary: #388e3c; 
+    --color-secondary: #c8e6c9; 
+    --color-text: #212121;
+    --color-background: #c8e6c9; 
+    --color-card-bg: #dcedc8;
+}
+
+body.mode-berantakan {
+    /* Mode Berantakan: Warna dan Kontras Buruk 
+     */
+    --color-primary: #ffeb3b; 
+    --color-secondary: #00bcd4; 
+    --color-text: #f44336; 
+    --color-background: #795548; 
+    --color-card-bg: #e0f7fa; 
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.judul-pencemaran {
+    cursor: pointer;
+    background-color: var(--color-card-bg);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid var(--color-primary);
+}
+
+.penjelasan-paragraf {
+    margin: 10px 0 20px 20px;
+    padding: 10px;
+    border: 1px dashed var(--color-secondary);
+}
+
+/* Kelas untuk menyembunyikan elemen */
+.tersembunyi {
+    display: none;
+}
+
+/* Responsive Web Design (RWD) untuk Card Gambar */
+.card-layout {
+    display: grid;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+/* Mobile (<=600px): 1 kolom */
+@media (max-width: 600px) {
+    .card-layout {
+        grid-template-columns: 1fr; /* 1 kolom */
+    }
+}
+
+/* Tablet (601px - 992px): 2 kolom */
+@media (min-width: 601px) and (max-width: 992px) {
+    .card-layout {
+        grid-template-columns: 1fr 1fr; /* 2 kolom */
+    }
+}
+
+/* Desktop (>=993px): 3 kolom */
+@media (min-width: 993px) {
+    .card-layout {
+        grid-template-columns: 1fr 1fr 1fr; /* 3 kolom */
+    }
+}
+
+/* Styling Card Gambar */
+.pencemaran-card img {
+    width: 100%;
+    height: 180px; 
+    display: block;
+    object-fit: cover; 
+}
+
+.pencemaran-card {
+    padding-bottom: 0; 
+}
+
+.pencemaran-card p {
+    padding: 10px;
+    margin: 0;
+    font-size: 0.9em;
+    text-align: center;
+    background-color: var(--color-card-bg);
+}
+
+/* Styling Tombol */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2e6e32; 
+}
+
+.control-panel {
+    text-align: center;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--color-secondary);
+}
